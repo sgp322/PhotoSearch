@@ -18,6 +18,10 @@
 	<script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
 	<script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
 	<script type="text/javascript" src="apigClient.js"></script>
+	<audio class="sound" src="chime.mp3"></audio> <!-- sound to be played when we click icon => http://soundbible.com/1598-Electronic-Chime.html -->
+	
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 </head>
 	
 <body>
@@ -46,27 +50,9 @@
 
 		<h4>Enter picture name:
 		<input type="text" id="searchKey" name="caption"></h4>
+		<i id='micro' class="fa fa-microphone"></i>
 		<h4>
 			<input type = "submit" onClick="serachImages()" />
-			<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
-			<script>
-			if (annyang) {
-			  // Add our commands to annyang
-			  annyang.addCommands({
-				'hello': function() { alert('Hello world!'); }
-			  });
-
-			  // Tell KITT to use annyang
-			  SpeechKITT.annyang();
-
-			  // Define a stylesheet for KITT to use
-			  SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
-
-			  // Render KITT's interface
-			  SpeechKITT.vroom();
-			}
-			</script>
 		</h4>
 
 		<div id="displayImages" class="container" style="padding:2% 0%;">
@@ -81,7 +67,7 @@ function serachImages() {
 	let params = {'q':$('#searchKey')[0].value};
 	let additionalParams = {
 		headers: {
-		"X-Api-Key" : 'key'
+		"X-Api-Key" : 'buS2jKDNHg8Yt2Osct24u39DxD7Pj21QSzya5c89'
 	  }
 	};
 	var body = {}
@@ -127,7 +113,7 @@ function uploadPic(event) {
 		let additionalParams = {
 			headers: {
 			"Content-Type" : "image/***",
-			"X-Api-Key" : 'key'
+			"X-Api-Key" : 'buS2jKDNHg8Yt2Osct24u39DxD7Pj21QSzya5c89'
 		  }
 		};
 		var body = btoa(reader.result)
@@ -148,7 +134,7 @@ function uploadPic(event) {
 </script>
 
 
-
+<script src="index.js"></script>
 
 
 

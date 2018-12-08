@@ -1,0 +1,13 @@
+.fa {
+  color: white;
+  background: #1e2440;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 1rem;
+  float: right;
+  width: 2rem;
+  height: 2rem;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
